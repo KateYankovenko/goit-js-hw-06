@@ -20,7 +20,11 @@ const gallery = document.querySelector(".gallery");
 const galleryImg = images.map(image => `<li><img alt = "${image.alt}" src = "${image.url}"></img></li>`)
   .join("");
 
-gallery.insertAdjacentHTML("beforeend",galleryImg);
+gallery.insertAdjacentHTML("beforeend", galleryImg);
+
+gallery.style.display = "flex";
+gallery.style.gap = "10%";
+gallery.style.opacity = "0.5";
 
 // galleryListItem.append(singleImage);
 // Напиши скрипт для створення галереї зображень на підставі масиву даних. 
