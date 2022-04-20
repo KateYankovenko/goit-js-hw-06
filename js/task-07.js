@@ -4,7 +4,12 @@
 // властивість font - size.В результаті, перетягуючи
 // повзунок, буде змінюватися розмір тексту.
 
-const input = document.querySelector("#font-size-control");
-const textChange = document.querySelector("#text");
+
+const inputText = document.getElementById("font-size-control");
+const text = document.getElementById("text");
+
+inputText.addEventListener("input", () => {
+    text.style.fontSize = `${inputText.value}px`
+});
 
 

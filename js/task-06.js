@@ -9,7 +9,7 @@
 
 let inputSymbols = document.querySelector("#validation-input");
 
-const checkInputLength = (event) => {
+const onCheckInputLength = (event) => {
 
     if (event.currentTarget.value.length === Number(inputSymbols.dataset.length)) {
         inputSymbols.classList.remove("invalid");
@@ -19,7 +19,7 @@ const checkInputLength = (event) => {
         inputSymbols.classList.add("invalid");
     }
 }
-inputSymbols.addEventListener("blur", checkInputLength);
+inputSymbols.addEventListener("blur", onCheckInputLength);
 
 
 
