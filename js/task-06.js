@@ -7,10 +7,46 @@
 // 3.Для додавання стилів використовуй CSS - класи valid і invalid, які ми вже
 // додали у вихідні файли завдання.
 
-const inputSymbols = document.querySelector("#validation-input");
+let inputSymbols = document.querySelector("#validation-input");
 
-if () {
-    inputSymbols.border = 
+const checkInputLength = (event) => {
+
+    if (event.currentTarget.value.length === Number(inputSymbols.dataset.length)) {
+        inputSymbols.classList.remove("invalid");
+        inputSymbols.classList.add("valid");
 } else {
-    inputSymbols.border =
+        inputSymbols.classList.remove("valid");
+        inputSymbols.classList.add("invalid");
+    }
 }
+inputSymbols.addEventListener("blur", checkInputLength);
+
+
+
+
+
+
+    
+
+// inputSymbols.addEventListener("blur", () => {
+
+//   let inpStyle = document.querySelector("style");
+
+//     if (inputSymbols.data-length) {
+//         inpStyle.classList.add("valid");
+//     } else {
+//         inpStyle.classList.add("invalid");
+//     }
+//     return inpStyle;
+// });
+
+// const toggleInput = () => {
+//     const dataSymbMax = inputSymbols.data-length;
+//     if (Number(dataSymbMax)) {
+//         inputSymbols.classList.toggle("valid");   
+//     } else {
+//           inputSymbols.classList.toggle("invalid");
+//     }
+// }
+// inputSymbols.addEventListener("blur",toggleInput);
+
