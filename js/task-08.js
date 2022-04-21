@@ -23,12 +23,12 @@ function onFormSubmit(event) {
     const {elements: { email, password }
     } = event.currentTarget;
     
+    console.log({ email: email.value, password: password.value });
     
     if (email.value === "" || password.value === "") {
         alert(`All fields should be filled in!!!`);
-    } else {
-    console.log(`Name: ${email.value}, Password: ${password.value} `);
+    } 
     
     event.currentTarget.reset();
-    }
 }
+

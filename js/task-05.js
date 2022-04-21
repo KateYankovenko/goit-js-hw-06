@@ -5,27 +5,14 @@
 // рядок "Anonymous".
 
 
+
 const textInput = document.querySelector("#name-input");
 const textOutput = document.querySelector("#name-output");
 
-textInput.addEventListener("input", (event) => {
-    textOutput.textContent = event.currentTarget.value;
-    console.log(textOutput.textContent);
+textInput.addEventListener("input", () => {
+    textOutput.textContent = textInput.value;
+    if (textInput.value === "") {
+       textOutput.textContent = "Anonymous"; 
+    }
 });
-
-// console.log(textInput.textContent);
-
-// const revealUserName = (nameInput, nameOutput) => {
-    
-//     // if (nameInput === "") {
-//     //     nameOutput.textContent = "Anonymous";
-//     // } else {
-//     //     nameOutput.textContent = nameInput.value;
-//     // }
-    
-//    return (nameOutput==="") ? "Anonymous" : nameInput.value;   
-// }
-
-// nameInput.addEventListener("input", revealUserName);
-
 
