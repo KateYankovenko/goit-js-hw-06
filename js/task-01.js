@@ -17,19 +17,18 @@
 const categoryItems = document.querySelectorAll(".item");
 console.log(`Number of categories:`, categoryItems.length);// Number of categories: 3
 
-categoryItems.forEach((item) => {
-
-    console.log(`Category:`, item.querySelector("h2").textContent);
-    console.log(`Elements:`, item.querySelector("ul").children.length);
+categoryItems.forEach(function (item) {
+    console.log('Category :', item.firstElementChild.textContent)
+    console.log('Elelments :', item.lastElementChild.children.length)
 })
 
 
-// const categoryItemsChildren = categoryItems.firstElementChild;
-// console.log(categoryItemsChildren.value);
+// categoryItems.forEach((item) => {
 
-// const subItemElements = document.querySelectorAll(".item")
-//     .forEach((el) => {
-//         console.log(`Category:`, el.querySelector("h2").textContent);
-//         console.log(`Elements:`, el.querySelector("ul").children.length);
+//     console.log(`Category:`, item.querySelector("h2").textContent);
+//     console.log(`Elements:`, item.querySelector("ul").children.length);
 // })
+
+
+
 
